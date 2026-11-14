@@ -188,7 +188,7 @@ function Postos() {
     <Section id="postos" icon={<MapPin />} eyebrow="Localização" title="Postos de saúde perto de você" sub="Use sua localização para abrir o mapa com as unidades mais próximas.">
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {[["posto de saúde", "Postos de saúde"], ["UPA pronto atendimento", "UPA / Pronto atendimento"], ["hospital", "Hospitais"], ["farmácia", "Farmácias"]].map(([q, l], i) => (
-          <button key={q} onClick={() => perto(q)} className={`${i === 0 ? B.primary : B.outline} h-auto py-4`}>{l}</button>
+          <button key={q} onClick={() => perto(q!)} className={`${i === 0 ? B.primary : B.outline} h-auto py-4`}>{l}</button>
         ))}
       </div>
       {msg && <p className="mt-4 text-muted-foreground">{msg}</p>}
